@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Colors*/
+    --brand-light: #59B2FF;
+    --brand-mid: #3487CF;
+    --brand-dark: #1D6FB6;
+
+    --danger: #FF5959;
+
+    --input-base: #1C1F21;
+    --input-stroke: #363B40;
+    --input-placeholder: #869198;
+
+    --shape-background: #131516;
+    --shape-body: #212427;
+    --shape-button: #2D3136;
+    --shape-hover: #383D42;
+
+    --text-body: #C8CDD0;
+    --text-heading: #F9F9F9;
+
+
+    /*Fonts and typography*/
+    font-size: 62.5%;
+
+    --font-family-leckerli: "Leckerli One", sans-serif;
+    --font-family-baloo: "Baloo 2", sans-serif;
+    --font-family-opensans: "Open Sans", sans-serif;
+
+    --logo-leckerli: 400 4rem var(--font-family-leckerli);
+
+    --text-md-baloo: bold 2.8rem var(--font-family-baloo);
+    --text-sm-baloo: bold 1.8rem var(--font-family-baloo);
+
+    --text-md-opensans: 400 1.6rem var(--font-family-opensans);
+    --text-sm-opensans: 400 1.4rem var(--font-family-opensans);
+    --text-xs-opensans: 400 1.2rem var(--font-family-opensans);
+}

@@ -43,3 +43,26 @@
     --text-sm-opensans: 400 1.4rem var(--font-family-opensans);
     --text-xs-opensans: 400 1.2rem var(--font-family-opensans);
 }
+
+body {
+    background-color: var(--shape-background);
+    color: var(--text-body);
+    font: var(--text-md-opensans);
+}
+
+h2 {
+    font: var(--text-md-baloo);
+    color: var(--text-heading);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

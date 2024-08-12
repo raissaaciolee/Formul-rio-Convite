@@ -1,0 +1,47 @@
+.radio-inner {
+    background-color: var(--input-base);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: .4rem;
+    border: 1px solid var(--input-stroke);
+    border-radius: .8rem;
+    
+    .radio-wrapper {
+        position: relative;
+        padding: 1.05rem 1.8rem;
+        border-radius: .5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem;
+
+        label {
+            margin: 0;
+        }
+
+        input {
+            all: unset;
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+        }
+    }
+
+    .radio-wrapper:has(:checked) {
+        background-color: var(--shape-button);
+
+        & svg path {
+            stroke: var(--brand-light);
+        }
+
+        label {
+            color: var(--text-heading);
+            font-weight: 500;
+        }
+    }
+
+    &:hover, &:focus-within {
+        outline: 2px solid var(--brand-light);
+    }
+}

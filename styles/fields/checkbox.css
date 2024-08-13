@@ -1,0 +1,28 @@
+#terms {
+    .checkbox-wrapper {
+        gap: 1.2rem;
+
+        div {
+            position: relative;
+            background: url("/assets/icons/checkbox-default.svg") no-repeat center/contain;
+            width: 2rem;
+            height: 2rem;
+
+            &:has(:checked) {
+                background: url("/assets/icons/checkbox-checked.svg") no-repeat center/contain;
+            }
+        }
+
+        p {
+            font: var(--text-sm-opensans);
+
+            a {
+                color: var(--brand-light);
+
+                &:hover {
+                    color: var(--brand-dark);
+                }
+            }
+        }
+    }
+}

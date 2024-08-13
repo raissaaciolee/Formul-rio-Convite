@@ -80,5 +80,9 @@
         &:has(:checked), &:focus-within {
             outline: 2px solid var(--brand-light);
         }
+
+        &:hover {
+            background-color: var(--shape-hover);
+        }
     }
 }

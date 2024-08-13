@@ -1,47 +1,80 @@
-.radio-inner {
-    background-color: var(--input-base);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: .4rem;
-    border: 1px solid var(--input-stroke);
-    border-radius: .8rem;
+#container-radio {
+    .radio-inner {
+        background-color: var(--input-base);
+        grid-template-columns: repeat(2, 1fr);
+        padding: .4rem;
+        border: 1px solid var(--input-stroke);
+        border-radius: .8rem;
+        
+        .radio-wrapper {
+            position: relative;
+            padding: 1.05rem 1.8rem;
+            border-radius: .5rem;
+            justify-content: center;
+            gap: .8rem;
     
+            label {
+                margin: 0;
+            }
+        }
+    
+        .radio-wrapper:has(:checked) {
+            background-color: var(--shape-button);
+    
+            & svg path {
+                stroke: var(--brand-light);
+            }
+    
+            label {
+                color: var(--text-heading);
+                font-weight: 500;
+            }
+        }
+    
+        &:hover, &:focus-within {
+            outline: 2px solid var(--brand-light);
+        }
+    }
+}
+
+.container-colors {
+    justify-content: space-between;
+
     .radio-wrapper {
+        background-color: var(--input-stroke);
+        padding: .6rem;
+        border-radius: 50%;
         position: relative;
-        padding: 1.05rem 1.8rem;
-        border-radius: .5rem;
+        outline: 2px solid transparent;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: .8rem;
-
-        label {
-            margin: 0;
-        }
-
-        input {
-            all: unset;
-            position: absolute;
-            inset: 0;
-            cursor: pointer;
+        &:focus-within, &:has(:checked) {
+            outline: 2px solid var(--brand-light);
         }
     }
+}
 
-    .radio-wrapper:has(:checked) {
+.container-themes {
+    grid-template-columns: repeat(4, 1fr);
+    gap: .8rem;
+
+    figure {
         background-color: var(--shape-button);
+        padding: .4rem;
+        outline: 2px transparent;
+        border: 1px solid var(--input-stroke);
+        border-radius: .8rem;
+        position: relative;
 
-        & svg path {
-            stroke: var(--brand-light);
+        figcaption{
+            text-align: center;
+            
+            label {
+                margin-block: .8rem;
+            }            
         }
 
-        label {
-            color: var(--text-heading);
-            font-weight: 500;
+        &:has(:checked), &:focus-within {
+            outline: 2px solid var(--brand-light);
         }
-    }
-
-    &:hover, &:focus-within {
-        outline: 2px solid var(--brand-light);
     }
 }

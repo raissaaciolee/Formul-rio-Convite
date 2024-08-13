@@ -14,9 +14,38 @@ input, textarea {
     &:hover, &:focus-within {
         outline: 2px solid var(--brand-light);
     }
+}
+
+input, textarea {
+    &:invalid {
+        outline: 2px solid var(--danger);
+    }
 
     &:invalid {
         outline: 2px solid var(--danger);
+    }
+
+    & + .error, div:has(&) + .error {
+        display: inline-block;
+        color: var(--danger);
+        font: var(--text-xs-opensans);
+        margin-top: 1rem;
+
+        svg path {
+            stroke: var(--danger);
+        }
+    }
+
+    &:required + .error,
+    div:has(&:required) + .error {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+    }
+
+    &:not(:focus):valid + .error,
+    div:has(&:not(:focus):valid) + .error {
+        display: none;
     }
 }
 
@@ -27,16 +56,92 @@ label {
 }
 
 .container-inputs {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.6rem;
 }
 
 
-input[type="date"] {
+input[type="datetime-local"] {
     text-transform: uppercase;
 
     &::-webkit-calendar-picker-indicator {
         opacity: 0;
     }
 }
+
+#cover-style-photo {
+    justify-content: space-between;
+
+    .container-button-toggle {
+        & > div {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            
+            .button-dark-mode {
+                position: relative;
+        
+                input {
+                    all: unset;
+                    position: absolute;
+                    inset: 0;
+                    cursor: pointer;
+                }
+        
+                &:not(:checked) {
+                    background: url("/assets/icons/btn-off.svg") no-repeat center/contain;
+                    width: 6.4rem;
+                    height: 3.2rem;
+                }
+        
+                &:has(:checked) {
+                    background: url("/assets/icons/btn-on.svg") no-repeat center/contain;
+                }
+            }
+        }
+    }
+
+    .dropzone {
+        label {
+            margin-bottom: 1.6rem;
+        }
+
+        & > div {
+            position: relative;
+            cursor: pointer;
+
+            .button {
+                background-color: var(--shape-button);
+                color: var(--text-heading);
+                padding: 1.05rem 1.2rem;
+                border-radius: .8rem;
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+                font: var(--text-sm-opensans);
+                position: absolute;
+
+                svg path {
+                    stroke: var(--brand-light);
+                }
+
+            }
+
+            input {
+                all: unset;
+
+                &::file-selector-button {
+                    opacity: 0;
+                    width: 12rem;
+                }
+            }
+
+            &:hover, &:focus-within {
+                .button {
+                    background-color: var(--shape-hover);
+                }
+            }
+        }
+    }
+}
+

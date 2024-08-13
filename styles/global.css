@@ -66,3 +66,27 @@ h2 {
     white-space: nowrap;
     border-width: 0;
 }
+
+.input-radio-reset {
+    all: unset;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+
+    &:hover, &:focus-within {
+        outline: none;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.align-items {
+    display: flex;
+    align-items: center;
+}

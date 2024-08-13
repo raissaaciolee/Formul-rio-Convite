@@ -48,6 +48,7 @@ body {
     background-color: var(--shape-background);
     color: var(--text-body);
     font: var(--text-md-opensans);
+    overflow: hidden;
 }
 
 h2 {

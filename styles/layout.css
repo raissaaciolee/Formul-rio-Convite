@@ -2,7 +2,6 @@
     height: 100vh;
     grid-template-columns: 32% 1fr;
     gap: 2rem;
-    overflow: hidden;
     padding: 2rem;
 }
 

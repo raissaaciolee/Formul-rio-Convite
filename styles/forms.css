@@ -22,4 +22,9 @@ form {
     fieldset + fieldset {
         margin-top: 4.8rem;
     }
+
+    fieldset:last-child {
+        padding-bottom: 4.8rem;
+        border-bottom: 1px solid var(--input-stroke);
+    }
 }

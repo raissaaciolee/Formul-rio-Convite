@@ -88,13 +88,13 @@ input[type="datetime-local"] {
                 }
         
                 &:not(:checked) {
-                    background: url("/assets/icons/btn-off.svg") no-repeat center/contain;
+                    background: url(/assets/icons/btn-off.svg) no-repeat center/contain;
                     width: 6.4rem;
                     height: 3.2rem;
                 }
         
                 &:has(:checked) {
-                    background: url("/assets/icons/btn-on.svg") no-repeat center/contain;
+                    background: url(/assets/icons/btn-on.svg) no-repeat center/contain;
                 }
             }
         }

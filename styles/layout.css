@@ -6,7 +6,7 @@
 }
 
 aside {
-    background: url(/assets/images/cake-image.png) no-repeat center/cover;
+    background: url("../assets/images/cake-image.png") no-repeat center/cover;
     border-radius: 1.2rem;
     padding: 3.2rem;
     overflow: hidden;

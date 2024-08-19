@@ -4,12 +4,12 @@
 
         div {
             position: relative;
-            background: url(/assets/icons/checkbox-default.svg) no-repeat center/contain;
+            background: url(../../assets/icons/checkbox-default.svg) no-repeat center/contain;
             width: 2rem;
             height: 2rem;
 
             &:has(:checked) {
-                background: url(/assets/icons/checkbox-checked.svg) no-repeat center/contain;
+                background: url(../../assets/icons/checkbox-checked.svg) no-repeat center/contain;
             }
         }
 
